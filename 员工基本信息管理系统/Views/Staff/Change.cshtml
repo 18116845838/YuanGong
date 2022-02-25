@@ -1,0 +1,48 @@
+﻿@model Service.ViewModel.StaffModel
+@{
+    ViewBag.Title = "Change";
+}
+
+<h2>修改</h2>
+<form method="post">
+    <input type="text" name="id" value="" placeholder="根据id修改属性" /><br />
+    <label>姓名:</label>
+    <br />
+    @Html.TextBoxFor(m => m.Name)
+    <br />
+    <label>手机号:</label>
+    <br />
+    @Html.TextBoxFor(m => m.cellPhoneNumber)
+    <br />
+
+    <label>身份证号:</label>
+    <br />
+    @Html.TextBoxFor(m => m.IDNumber)
+    <br />
+    <label>年龄 :   </label>
+    <br />
+    @Html.TextBoxFor(m => m.Age)
+    <br />
+
+    <label>性别:</label>
+    <br />
+    <label>@Html.RadioButtonFor(m => m.Gender, true)男</label>
+    <label>@Html.RadioButtonFor(m => m.Gender, false)女</label>
+    <br />
+
+    <label>毕业院校:</label>
+    <br />
+    @Html.TextBoxFor(m => m.GraduateInstitutions)
+    <br />
+
+    <label>家庭住址:</label>
+    <br />
+    @Html.TextBoxFor(m => m.HomeAddress)
+    <br />
+
+    <label>兴趣爱好:</label>
+    <br />
+    @Html.TextBoxFor(m => m.HobbiesAndInterests)
+    <br />
+    <button type="submit">提交</button>
+</form>
